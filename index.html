@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sbycr</title>
+    <style>
+        /* 页面背景和布局 */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000; /* 黑色背景 */
+            overflow: hidden; /* 防止滚动条 */
+            color: #fff; /* 默认文本为白色 */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 中央显示的主要文本样式 */
+        .main-text {
+            font-size: 72px;
+            color: #fff; /* 白色 */
+            position: absolute;
+            z-index: 2;
+            text-align: center;
+        }
+
+        /* "忘不掉" 文字样式 */
+        .sub-text {
+            font-size: 48px; /* 比主文字小 */
+            color: #ff69b4; /* 粉红色 */
+            position: absolute;
+            z-index: 1;
+            text-align: center;
+            opacity: 0;
+            animation: fly-across 5s infinite;
+        }
+
+        /* 飞行动画 */
+        @keyframes fly-across {
+            0% {
+                left: -200px; /* 从屏幕左侧外开始 */
+                top: -100px;  /* 随机从屏幕顶部外部开始 */
+                opacity: 1; /* 起始时为可见 */
+            }
+            50% {
+                left: 50%; /* 到达页面中心 */
+                top: 50%;  /* 到达页面中心 */
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+            100% {
+                left: 100vw; /* 飞到屏幕右侧外 */
+                top: 100vh;  /* 飞到屏幕底部外 */
+                opacity: 0; /* 离开时透明 */
+            }
+        }
+
+        /* 给每个飞行文字的动画添加延迟，使其依次飞行 */
+        .flying-text:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .flying-text:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .flying-text:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        .flying-text:nth-child(4) {
+            animation-delay: 3s;
+        }
+
+        .flying-text:nth-child(5) {
+            animation-delay: 4s;
+        }
+
+        /* 更多飞舞的效果 */
+        .flying-text:nth-child(6) {
+            animation-delay: 5s;
+        }
+
+        .flying-text:nth-child(7) {
+            animation-delay: 6s;
+        }
+
+        .flying-text:nth-child(8) {
+            animation-delay: 7s;
+        }
+
+        .flying-text:nth-child(9) {
+            animation-delay: 8s;
+        }
+
+        .flying-text:nth-child(10) {
+            animation-delay: 9s;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 主要显示的文字 -->
+    <div class="main-text">YCR忘不掉PRL</div>
+
+    <!-- 飞过的"忘不掉"文字 -->
+    <div class="flying-text sub-text">忘不掉</div>
+    <div class="flying-text sub-text">忘不掉</div>
+    <div class="flying-text sub-text">忘不掉</div>
+    <div class="flying-text sub-text">忘不掉</div>
+    <div class="flying-text sub-text">忘不掉</div>
+    <div class="flying-text sub-text">忘不掉</div>
+    <div class="flying-text sub-text">忘不掉</div>
+    <div class="flying-text sub-text">忘不掉</div>
+    <div class="flying-text sub-text">忘不掉</div>
+    <div class="flying-text sub-text">忘不掉</div>
+</div>
+
+</body>
+</html>
